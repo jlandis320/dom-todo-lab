@@ -1,10 +1,15 @@
 const input = document.getElementById('input')
 const button = document.querySelector('#submit-button')
+const resetButton = document.querySelector('#reset-button')
 const uList = document.querySelector('#todo-list')
 
 button.addEventListener('click', function(event){
   // console.log("clicked");
   // create li element
+  input.addEventListener('keydown', (function (event){
+    input.style.backgroundColor = 'white'
+  }))
+
   if (input.value === '') {
     input.style.backgroundColor = 'salmon'
   } 
@@ -26,4 +31,7 @@ uList.addEventListener('click', function(event){
   event.target.style.setProperty('text-decoration', 'line-through')
 })
 
+resetButton.addEventListener('click', function(event){
+  
+})
 
