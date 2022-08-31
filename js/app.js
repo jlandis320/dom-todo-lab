@@ -7,8 +7,9 @@ button.addEventListener('click', function(event){
   // create li element
   if (input.value === '') {
     input.style.backgroundColor = 'salmon'
-    
-  } else {
+  } 
+  else if (input.value !== '') {
+    input.style.backgroundColor = 'white'
     const li = document.createElement('li')
     // console.log(li);
     // set the text of the li element to the input text
@@ -20,4 +21,9 @@ button.addEventListener('click', function(event){
     input.value = ""
   }
 })
+
+uList.addEventListener('click', function(event){
+  event.target.style.setProperty('text-decoration', 'line-through')
+})
+
 
