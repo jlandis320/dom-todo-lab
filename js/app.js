@@ -5,16 +5,16 @@ const uList = document.querySelector('#todo-list')
 
 button.addEventListener('click', function(event){
   // console.log("clicked");
-  // create li element
   input.addEventListener('keydown', (function (event){
     input.style.backgroundColor = 'white'
   }))
-
+  
   if (input.value === '') {
     input.style.backgroundColor = 'salmon'
   } 
   else if (input.value !== '') {
     input.style.backgroundColor = 'white'
+    // create li element
     const li = document.createElement('li')
     // console.log(li);
     // set the text of the li element to the input text
@@ -28,10 +28,10 @@ button.addEventListener('click', function(event){
 })
 
 uList.addEventListener('click', function(event){
-  event.target.style.setProperty('text-decoration', 'line-through')
+  event.target.style.textDecoration = 'line-through'
 })
 
 resetButton.addEventListener('click', function(event){
-  
+  uList.removeChild(uList)
 })
 
